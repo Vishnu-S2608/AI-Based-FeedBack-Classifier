@@ -1,0 +1,14 @@
+# Python
+backend/venv/
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+
+# Database file (optional)
+backend/db.json
+
+# OS files
+.DS_Store
+Thumbs.db

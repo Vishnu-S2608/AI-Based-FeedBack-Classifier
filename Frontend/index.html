@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback Classifier</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+  <div class="background"></div>
+
+  <div class="wrapper">
+
+    <!-- TOP BUTTON -->
+    <button id="toggleBtn" class="top-toggle">
+      Show All Feedbacks
+      
+    </button>
+
+    <!-- HERO -->
+    <div class="hero">
+      
+
+      <h1>
+        <span class="gradient-text">Feedback Classifier</span>
+      </h1>
+
+      <p>
+        Analyze the sentiment of any feedback instantly with intelligent classification.
+      </p>
+    </div>
+
+    <!-- CARD -->
+    <div class="card">
+
+      <label>Enter your feedback</label>
+
+      <textarea
+        id="feedbackInput"
+        placeholder="Type your feedback here... (e.g. The product is amazing and easy to use!)"
+        rows="3"
+      ></textarea>
+
+      <div class="card-footer">
+        <p>Press Enter to analyze</p>
+
+        <button type="button" id="analyzeBtn" class="analyze-btn">
+          ⚡ Analyze
+        </button>
+      </div>
+    </div>
+
+    <!-- RESULT -->
+    <div id="resultCard" class="result-card hidden"></div>
+
+    <!-- FEEDBACK LIST -->
+    <div id="feedbackList" class="feedback-list hidden"></div>
+
+
+    <div></div>
+  </div>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
