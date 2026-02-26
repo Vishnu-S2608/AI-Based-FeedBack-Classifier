@@ -7,7 +7,7 @@ __pycache__/
 .env
 
 # Database file (optional)
-backend/db.json
+backend/Db.json
 
 # OS files
 .DS_Store
