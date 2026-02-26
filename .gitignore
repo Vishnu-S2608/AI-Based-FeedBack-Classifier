@@ -6,7 +6,7 @@ __pycache__/
 # Environment variables
 .env
 
-# Database file (optional)
+# Database file
 backend/Db.json
 
 # OS files
