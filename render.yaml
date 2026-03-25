@@ -1,0 +1,32 @@
+services:
+  # Backend Service (Flask)
+  - type: web
+    name: ai-feedback-classifier-backend
+    env: python
+    buildCommand: |
+      cd Backend
+      pip install -r requirements.txt
+    startCommand: |
+      cd Backend
+      python app.py
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false # Set this in Render Dashboard
+      - key: PORT
+        value: 5000
+      - key: PYTHON_VERSION
+        value: 3.10.0
+
+  # Frontend Service (Static Site)
+  - type: web
+    name: ai-feedback-classifier-frontend
+    env: static
+    buildCommand: |
+      cd frontend-react
+      npm install
+      npm run build
+    publishPath: frontend-react/dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
